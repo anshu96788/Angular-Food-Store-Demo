@@ -1,0 +1,9 @@
+<div class="card" *ngFor="let res1 of res" >
+    <div *ngIf="res1.email===hero1">
+    <img src="{{res1.img}}" alt="Denim Jeans" style="width:100%">
+    <h1>{{res1.name}}</h1>
+    <p class="price">Price:{{res1.price}} Total KG:{{res1.kg}}</p>
+    <p>Date:{{res1.Date}} </p>
+  <p>Address:{{res1.add}} </p>
+  <p>PIN:{{res1.pin}}</p></div>
+      </div>

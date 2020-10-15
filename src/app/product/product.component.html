@@ -1,0 +1,12 @@
+
+
+            <div class="card" *ngFor="let res1 of res">
+                <img src="{{res1.img}}" alt="Denim Jeans" style="width:100%">
+                <h1>{{res1.Name}}</h1>
+                <p class="price">Price: {{res1.Price}}/KG</p>
+                <p><button (click)="Add(res1.img,res1.Price,res1.Name)">Order Now</button></p>
+              </div>
+ 
+
+
+  

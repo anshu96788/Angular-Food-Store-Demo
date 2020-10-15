@@ -1,0 +1,48 @@
+
+<form  (ngSubmit)="sub(f)"  #f="ngForm" >
+<table id="customers">
+    <tr> <td> Fruit Name: {{hero}} </td></tr>
+    <tr>
+<td>
+    Total KG:  {{count}}
+
+</td>
+<td>
+    <p class="button" (click)="Add()"> Add +1 KG </p>
+</td>
+<td>
+    <p class="button1" (click)="Remove()"> Remove -1 KG</p>
+ </td>
+    </tr>
+    <tr>
+        <td>
+           Total Price:  {{tot}}
+        </td>
+
+    </tr>
+    <tr>
+     Address:   <span style="color:red;" *ngIf="!e1.valid">Please Enter a valid Adress</span>
+     
+    </tr>
+    <tr>
+        <input type="text" placeholder="Enter Address" ngModel name="add" required  #e1="ngModel">
+    </tr>
+
+    <tr>
+        PIN:   <span style="color:red;" *ngIf="!n1.valid">Please Enter a valid PIN</span>
+        
+       </tr>
+       <tr>
+           <input type="number" placeholder="Enter PIN" ngModel name="pin" number required  #n1="ngModel">
+       </tr>
+
+
+    <tr>
+     
+<td>
+    <button class="button" type="submit"  *ngIf="f.valid" > Buy Now </button>
+</td>
+    </tr>
+     
+</table>
+</form>

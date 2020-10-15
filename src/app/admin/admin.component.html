@@ -1,0 +1,22 @@
+<h1>Add Fruit</h1><form class="modal-content animate" (ngSubmit)="sub0(f0)"  #f0="ngForm" >
+    <h1 style="color:red;"><b>{{str0}}</b></h1>
+
+    <div class="container">
+        <label for="email"><b>Name: </b> <span style="color:red;" *ngIf="!e0.valid">Please Enter a Valid Name</span></label>
+        <input type="email" placeholder="Enter Username" ngModel name="email" required  #e0="ngModel">
+
+        <label for="psw"><b>Image URL: </b> <span style="color:red;" *ngIf="!p0.valid ">Please Enter a Image URL</span></label>
+        <input type="text" placeholder="Enter Password" ngModel name="psw" required #p0="ngModel">
+        
+        <label for="psw"><b>Price: </b> <span style="color:red;" *ngIf="!p1.valid ">Please Enter a Price</span></label>
+        <input type="number" placeholder="Enter Password" ngModel name="img" required #p1="ngModel">
+    
+      <button *ngIf="f0.valid " type="submit">Add</button>
+     
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>

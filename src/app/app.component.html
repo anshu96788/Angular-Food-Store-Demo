@@ -1,0 +1,12 @@
+<app-log (valueChange1)="show1($event)" *ngIf="load === 'login'"></app-log>
+<app-header (valueChange)="show($event)"  *ngIf="load !== 'login'"></app-header>
+<div  *ngIf="load !== 'login'" class="topnav">
+  <a class="active" href="#">You are LogIn as: {{load1}}</a>
+  <a href="#" (click)="lo()">LogOut</a>
+ 
+</div>
+<app-product   (valueChange2)="show2($event)" *ngIf="load === 'home'"></app-product>
+<app-cart (valueChang)="sh($event)" [hero]="hero" [hero1]="hero1" [hero2]="hero2" [hero3]="hero3" *ngIf="load === 'Cart'"></app-cart>
+<app-order [hero1]="hero4" *ngIf="load === 'Order'"></app-order>
+<app-orderfin   *ngIf="load === 'odf'"></app-orderfin>
+<app-admin (valueChan)="s($event)"  *ngIf="load === 'adm'"></app-admin>
